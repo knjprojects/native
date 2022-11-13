@@ -1,47 +1,5 @@
 workflows:
-  my-workflow:
-    name: Template codemagic workflow
-    labels:
-      - QA
-      - "Joshua's Repo"
-    instance_type: mac_mini_m1
-    max_build_duration: 60
-    environment:
-      groups:
-        - group_name
-      vars:
-        PUBLIC_ENV_VAR: "value here"
-        SANITY_PROJECT_ID: "mu4mgggn"
-        SANITY_DATASET: 'production'
-        SANITY_API_TOKEN: 'skqa7ly6x0wcySR6D949tjKzTFpStJsLGQcPnDGUMYXYFlSKzqEZ6SriTfuOHQJj3JjRSOGYudHgNz3P2cwil81HQh7srOxlOERUYuFZ37o655PP80dJXc4tbY3e1FYl0ddfLZGKP5ricntd1fKe4c5SJUO1fF6a9eVxazEj8yZ1prXWvlIb'
-        FACEBOOK_CLIENT_ID: '508709211103356'
-        FACEBOOK_CLIENT_SECRET: '44fb177cddb3011b68b74e0fef99bee0'
-        NEXTAUTH_URL: 'http://localhost:3000'
-        SERPAPI_API_KEY: '27e0f3ede092ef2d52d058abad9948d0aa81c3269687a3d06a90213335e656cb'
-        GIPHY_API_KEY: 'qGhoCsSFm3NA7Ndj5eN4akEfWJ2uoAMh'
-        BUILDER_API_KEY: 'f46b82840ea5451fa709490fd72fa2cc'
-        FIREBASE_API_KEY: 'AIzaSyCo1OokU_H0K3RiLyqBGsqr_l6lay6W3CE'
-        GOOGLE_CLIENT_ID:  'AIzaSyD8-BYTtdWCxO7qCamQG8Yr90wGYcMrrGQ'
-      flutter: stable
-      xcode: latest
-    cache:
-      cache_paths:
-        - ~/.pub-cache
-    triggering:
-      events:
-        - push
-      branch_patterns:
-        - pattern: '*'
-          include: true
-          source: true
-      cancel_previous_builds: false
-    scripts:
-      - ...
-    artifacts:
-      - build/**/outputs/bundle/**/*.aab
-    publishing:
-      email:
-        recipients:
-          - name@example.com
-      scripts:
-        - echo 'Post-publish script'
+    sample-workflow:
+        name: Codemagic Sample Workflow
+        max_build_duration: 120
+        instance_type: mac_mini_m1
