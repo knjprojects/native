@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "build",
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "preserveConstEnums": true,
+    "allowJs": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "moduleResolution": "Node"
+  },
+  
+  "types": [
+    "react",
+    "react-dom",
+    "react-native"
+  ],
+  "exclude": [
+    "build",
+    "node_modules",
+    "App.tsx",
+    "babel.config.js",
+    "rn-cli.config.js",
+    "tailwind.config.js"
+  ],
+  "compileOnSave": false,
+  "extends": "expo/tsconfig.base"
+}
